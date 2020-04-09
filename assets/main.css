@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: cadetblue;
+}
+
 #app {
     display: flex;
     align-items: center;
@@ -42,7 +46,11 @@
     transform: translate(-50%, -30%);
 }
 
-.image .slider span {
+.image .slider .circle .active-circle {
+    background-color: blue;
+}
+
+.image .slider .circle {
     height: 15px;
     width: 15px;
     border-radius: 50%;
