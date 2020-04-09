@@ -1,9 +1,7 @@
-var slideLeft = $('.arrow-left');
-var slideRight = $('.arrow-right');
-var image = $('.image');
-
-
 $(document).ready(function() {
+
+    var slideLeft = $('.arrow-left');
+    var slideRight = $('.arrow-right');
 
     slideLeft.click(function() {
         var currentImg = $('.active');
@@ -20,11 +18,10 @@ $(document).ready(function() {
         var currentImg = $('.active');
         var nextImg = currentImg.next();
 
-        if (nextImg.length) {
+        if ((nextImg.length) && (!nextImg.hasClass('slider'))) {
             currentImg.removeClass('active');
             nextImg.addClass('active');
         }
     });
-
 
 });
