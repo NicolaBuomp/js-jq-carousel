@@ -6,14 +6,7 @@
 
 body {
     background-color: cadetblue;
-}
-
-h1 {
-    text-align: center;
-    padding: 20px;
-    text-transform: uppercase;
-    font-size: 50px;
-    ;
+    font-family: 'Nunito', sans-serif;
 }
 
 #app {
@@ -29,6 +22,12 @@ h1 {
     font-size: 30px;
     cursor: pointer;
     color: rgba(68, 68, 68, 0.753);
+    transition: 0.5s;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    transform: scale(1.5);
 }
 
 .image {
@@ -38,9 +37,10 @@ h1 {
 .image img {
     width: 900px;
     display: none;
+    border-radius: 5px;
 }
 
-.image .slider {
+.slider {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,21 +50,32 @@ h1 {
     width: 200px;
     height: 40px;
     left: 50%;
-    bottom: 30px;
-    transform: translate(-50%, -30%);
+    bottom: 10%;
+    transform: translate(-50%, -10%);
+    transition: 1s;
 }
 
-.image .slider .circle .active-circle {
-    background-color: blue;
+.slider:hover {
+    width: 250px;
+    height: 50px;
 }
 
-.image .slider .circle {
+.slider .circle {
     height: 15px;
     width: 15px;
     border-radius: 50%;
     background-color: #fff;
     margin: 15px;
-    ;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.slider .circle:hover {
+    transform: scale(1.5);
+}
+
+.slider .active-circle {
+    background-color: red;
 }
 
 .image .active {
